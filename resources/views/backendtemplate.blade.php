@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>Online Bus Ticket System</title>
 
   <!-- Custom fonts for this template-->
   <link href="{{asset('bus_admin/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -43,7 +43,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="{{'dashboardpage'}}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span>Online Bus Ticket System</span></a>
       </li>
 
       <!-- Divider -->
@@ -63,10 +63,10 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">20.02.2020:</h6>
-            <a class="collapse-item" href="{{route('courses.index')}}">Courses</a>
+            <a class="collapse-item" href="">Courses</a>
 
-            <a class="collapse-item" href="{{route('degrees.index')}}">Degrees</a>
-            <a class="collapse-item" href="{{route('subjects.index')}}">Subjects</a>
+            <a class="collapse-item" href="">Degrees</a>
+            <a class="collapse-item" href="">Subjects</a>
           </div>
         </div>
       </li>
@@ -80,9 +80,9 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">21.02.2020:</h6>
-            <a class="collapse-item" href="{{route('batches.index')}}">Batches</a>
-            <a class="collapse-item" href="{{route('trainers.index')}}">Trainers</a>
-            <a class="collapse-item" href="{{route('mentors.index')}}">Mentors</a>
+            <a class="collapse-item" href="">Batches</a>
+            <a class="collapse-item" href="">Trainers</a>
+            <a class="collapse-item" href="">Mentors</a>
             <!-- <a class="collapse-item" href="utilities-other.html">Other</a> -->
           </div>
         </div>
@@ -105,8 +105,8 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="{{route('groups.index')}}">Group</a>
-            <a class="collapse-item" href="{{route('students.index')}}">Student</a>
+            <a class="collapse-item" href="">Group</a>
+            <a class="collapse-item" href="">Student</a>
             <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>

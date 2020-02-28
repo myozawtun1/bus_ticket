@@ -13,7 +13,14 @@
 
 Route::get('/', function () {
 
-    return view('welcome');
+    return view('backendtemplate');
 });
 Route::get('dashboard','BackendController@dashboard');
+Route::resource('cities','CityController');
+Route::resource('types','TypeController');
+Route::resource('routes','RouteController');
+Route::resource('customers','CustomerController');
+Route::resource('bookings','BookingController');
+
+
 
