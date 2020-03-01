@@ -8,9 +8,10 @@
 		<div class="col-md-12">
 			<table>
 				<tbody>
-					<tr><th> Startroute:{{$route->startroute}} </th></tr>
-					<tr><th>Endroute:{{$route->endroute}}</th></tr>
-					<tr><th>Time:{{$route->time}}</th></tr>
+					<tr><th> Name:{{$customer->name}} </th></tr>
+					<tr><th>Email:{{$customer->email}}</th></tr>
+					<tr><th>Phone:{{$customer->phone}}</th></tr>
+					<tr><th>Address:{{$customer->address}}</th></tr>
 					
 				</tbody>
 

@@ -24,3 +24,14 @@
 </form>
 
 @endsection
+@section('script')
+  <script type="text/javascript" src="{{asset('js/general.js')}}"></script>
+  <script type="text/javascript" src="{{asset('js/interaction.js')}}"></script>
+  <script type="text/javascript" src="{{asset('js/methods.js')}}"></script>
+  <script type="text/javascript" src="{{asset('js/multiple.js')}}"></script>
+  <script type="text/javascript" src="{{asset('jquery.seat-charts.js')}}"></script>
+  <script type="text/javascript" src="{{asset('jquery.seat-charts.css')}}"></script>
+  <script type="text/javascript" src="{{asset('jquery.seat-charts.min.js')}}"></script>
+
+
+@endsection

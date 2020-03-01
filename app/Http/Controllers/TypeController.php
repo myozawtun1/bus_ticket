@@ -91,7 +91,7 @@ class TypeController extends Controller
     public function update(Request $request, $id)
     {
          $request->validate([
-            "name"=>'required|min:5|max:191',
+            "name"=>'required|min:3|max:191',
             "seat"=>'required',
             "price"=>'required',
             ""

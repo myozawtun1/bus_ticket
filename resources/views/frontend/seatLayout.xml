@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <RelativeLayout
+        android:id="@+id/seatLayoutScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomBarSeatSelection"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/scrollableLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <RelativeLayout
+                android:id="@+id/seatLegendLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@color/white" >
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/bus_seat_indicator_layout" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/seatLayoutLowerMain"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/seatLegendLayout"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="5.0dp"
+                android:paddingRight="5.0dp"
+                android:layout_marginTop="10.0dip">
+
+                <GridView
+                    android:id="@+id/gridView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/driver"
+                    android:layout_margin="4dp"
+                    android:horizontalSpacing="10dp"
+                    android:verticalSpacing="10dp"
+                    android:columnWidth="90dp"
+                    android:gravity="center"
+                    android:stretchMode="columnWidth" >
+                </GridView>
+
+                <RelativeLayout
+                    android:id="@+id/driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="20.0dp"
+                    android:layout_marginBottom="5.0dp"
+                    android:layout_alignRight="@+id/gridView1"
+                    android:background="@drawable/steering_icon"
+                    android:orientation="horizontal" >
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/seatLayoutUpper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seatLegendLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.0dip"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bottomBarSeatSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" >
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/bus_seat_bottom_layout" />
+    </RelativeLayout>
+
+</RelativeLayout>
