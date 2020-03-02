@@ -33,7 +33,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Bus Ticket<sup>2</sup></div>
       </a>
 
       <!-- Divider -->
@@ -58,15 +58,15 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>20.02.2020</span>
+          <span>29.02.2020</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">20.02.2020:</h6>
-            <a class="collapse-item" href="">Courses</a>
+            <h6 class="collapse-header">29.02.2020:</h6>
+            <a class="collapse-item" href="{{route('cities.index')}}">CITIES</a>
 
-            <a class="collapse-item" href="">Degrees</a>
-            <a class="collapse-item" href="">Subjects</a>
+            <a class="collapse-item" href="{{route('types.index')}}">TYPES</a>
+            <a class="collapse-item" href="{{route('routes.index')}}">ROUTES</a>
           </div>
         </div>
       </li>
@@ -75,14 +75,14 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-cog"></i>
-          <span>21.02.2020</span>
+          <span>1.03.2020</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">21.02.2020:</h6>
-            <a class="collapse-item" href="">Batches</a>
-            <a class="collapse-item" href="">Trainers</a>
-            <a class="collapse-item" href="">Mentors</a>
+            <h6 class="collapse-header">1.03.2020:</h6>
+            <a class="collapse-item" href="{{route('customers.index')}}">CUSTOMERS</a>
+            <a class="collapse-item" href="{{route('bookings.index')}}">BOOKINGS</a>
+            <!-- <a class="collapse-item" href="">Mentors</a> -->
             <!-- <a class="collapse-item" href="utilities-other.html">Other</a> -->
           </div>
         </div>

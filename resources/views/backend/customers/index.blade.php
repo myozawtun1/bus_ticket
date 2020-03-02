@@ -2,7 +2,6 @@
 @section('content')
 <div class="container-fluid">
 <h2>Show with table</h2>
-<a href="{{route('customers.create')}}" class="btn btn-info float-right">Add New</a>
 
 <div class="row">
 
@@ -61,6 +60,8 @@
 		@endforeach
 	</tbody>
 </table>
+<a href="{{route('customers.create')}}" class="btn btn-info float-right">Add New</a>
+
 
 </div>
 </div>

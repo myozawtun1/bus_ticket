@@ -2,7 +2,7 @@
 @extends('backendtemplate')
 @section('content')
 <div class="container-fluid">
-<h2>Show with your own ui</h2>
+<h2>Show with customer details</h2>
 	
 	<div class="row">
 		<div class="col-md-12">
@@ -12,6 +12,8 @@
 					<tr><th>Email:{{$customer->email}}</th></tr>
 					<tr><th>Phone:{{$customer->phone}}</th></tr>
 					<tr><th>Address:{{$customer->address}}</th></tr>
+					<tr><th>Gender:{{$customer->gender}}</th></tr>
+
 					
 				</tbody>
 

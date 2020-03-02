@@ -113,7 +113,7 @@ class CustomerController extends Controller
             // "avatar"=>'required|mimes:jpeg,jpg,png',
             "email"=>'required',
             "phone"=>'required',
-            "gender" => "required|min:4|max:6",
+            // "gender" => "required|min:4|max:6",
 
             "address"=>'required|min:5|max:191'
 
@@ -129,7 +129,7 @@ class CustomerController extends Controller
         $customer->email=request('email');
         // $mentor->course_id =request('courseid');
         // $mentor->degree_id=request('degreeid');
-        $customer->gender = request('gender');
+        // $customer->gender = request('gender');
         $customer->address=request('address');
 
 

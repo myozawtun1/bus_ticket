@@ -1,94 +1,102 @@
 @extends('backendtemplate')
 @section('content')
 <div class="container-fluid">
-	<h2>Route</h2>
+	<h2>Booking Create Form</h2>
 	<div class="row">
 		<div class="col-md-12">
 			<form action="{{route('bookings.store')}}" method="post" enctype="multipart/form-data">
 	@csrf
-	<label for="seatno">Seatno</label>
-	<input type="number" name="seatno"><br>
-	@if ($errors->has('seatno'))
-	<span class="help-block  text-danger"><strong>{{ $errors->first('seatno') }}</strong></span>
-	@endif
-	<br>
+
+	<div class="form-group row">
+            <label for="inputSeatno" class="col-sm-2 col-form-label">Seatno</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control @error('name') is-invalid @enderror" id="inputTitle" name="seatno" value="{{ old('seatno') }}" required autocomplete="seatno" autofocus>
+              @error('seatno')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+          </div>
+    <div class="form-group row">
+            <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control @error('date') is-invalid @enderror" id="inputTitle" name="date" value="{{ old('date') }}" required autocomplete="date" autofocus>
+              @error('date')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+          </div>
+    <div class="form-group row">
+            <label for="inputStatus" class="col-sm-2 col-form-label">Status</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control @error('status') is-invalid @enderror" id="inputTitle" name="status" value="{{ old('status') }}" required autocomplete="status" autofocus>
+              @error('status')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+          </div>
+     <div class="form-group row">
+              <label for="inputStartroute">Choose Startroute:</label>
+            <div class="form-group col-md-6">              
+              <select name="startroute" class="form-control" id="startroute">
+                <option value="">Choose Startroute:</option>
+                @foreach($routes as $row)
+                <option value="{{$row->id}}">{{$row->startroute}}</option>
+                @endforeach
+              </select>
+            </div>
+        </div>
+    <div class="form-group row">
+              <label for="inputStartroute">Choose Endroute:</label>
+            <div class="form-group col-md-6">              
+              <select name="endroute" class="form-control" id="endroute">
+                <option value="endroute">Choose Endroute:</option>
+                @foreach($routes as $row)
+                <option value="{{$row->id}}">{{$row->endroute}}</option>
+                @endforeach
+              </select>
+            </div>
+        </div>
+    <div class="form-group row">
+            <label for="inputTotalprice" class="col-sm-2 col-form-label">Total Price</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control @error('totalprice') is-invalid @enderror" id="inputTitle" name="totalprice" value="{{ old('totalprice') }}" required autocomplete="totalprice" autofocus>
+              @error('totalprice')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+          </div>
 	
-	<label for="date">Date</label>
-	<input type="date" name="date"><br>
-	@if ($errors->has('date'))
-	<span class="help-block text-danger"><strong>{{ $errors->first('date') }}</strong></span>
-	@endif
-	<br>
-	<label for="status">Status</label>
-	<input type="text" name="status"><br>
-	@if ($errors->has('status'))
-	<span class="help-block text-danger"><strong>{{ $errors->first('status') }}</strong></span>
-	@endif
-	<br>
+	 <div class="form-group row">
+              <label for="inputCustomer">Choose Customer:</label>
+            <div class="form-group col-md-6">              
+              <select name="customer" class="form-control" id="customer">
+                <option value="customer">Choose Customer:</option>
+                @foreach($customers as $row)
+                <option value="{{$row->id}}">{{$row->name}}</option>
+                @endforeach
+              </select>
+            </div>
+        </div>
 
-	<div class="form-group row">
-		<label class="col-sm-12 col-form-label">Choose Routes</label>
-		<select name="route_id" class="form-control">
-			@foreach($routes as $row)
-			<option value="{{$row->id}}">{{$row->startroute}}</option>
-			@endforeach
-		</select>
-	</div>
-	<br>
 
-	<div class="form-group row">
-		<label class="col-sm-12 col-form-label">Choose Routes</label>
-		<select name="route_id" class="form-control">
-			@foreach($routes as $row)
-			<option value="{{$row->id}}">{{$row->endroute}}</option>
-			@endforeach
-		</select>
-	</div>
-	<br>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Save</button>
+    </div>
 
-	<!-- <div class="form-group row">
-		<label class="col-sm-12 col-form-label">Choose Routes</label>
-		<select name="route_id" class="form-control">
-			@foreach($routes as $row)
-			<option value="{{$row->id}}">{{$row->time}}</option>
-			@endforeach
-		</select>
-	</div>
-	<br>
-	 -->
-	<!-- <label for="startroute">Startroute</label>
-	<input type="text" name="startroute"><br>
-	@if ($errors->has('startroute'))
-	<span class="help-block  text-danger"><strong>{{ $errors->first('startroute') }}</strong></span>
-	@endif
-	<br> -->
 	
-	<!-- <label for="endroute">Endroute</label>
-	<input type="text" name="endroute"><br>
-	@if ($errors->has('endroute'))
-	<span class="help-block text-danger"><strong>{{ $errors->first('endroute') }}</strong></span>
-	@endif
-	<br> -->
-	<div class="form-group row">
-		<label class="col-sm-12 col-form-label">Choose Customers</label>
-		<select name="customer_id" class="form-control">
-			@foreach($customers as $row)
-			<option value="{{$row->id}}">{{$row->name}}</option>
-			@endforeach
-		</select>
-	</div>
-	<br>
-	<label for="totalprice">Totalprice</label>
-	<input type="number" name="totalprice"><br>
-	@if ($errors->has('totalprice'))
-	<span class="help-block text-danger"><strong>{{ $errors->first('totalprice') }}</strong></span>
-	@endif
-	<br>
 
 	
 	<!-- <input type="submit" name="save" value=""><br> -->
 	
-	<button type="submit">save</button>
+	
 </form>
 
 			

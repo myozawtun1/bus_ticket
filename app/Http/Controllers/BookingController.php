@@ -46,8 +46,8 @@ class BookingController extends Controller
             "seatno"=>'required',
             "date"=>'required',
             "status"=>'required',
-            // "startroute"=>'required',
-            "route"=>'required',
+            "startroute"=>'required',
+            "endroute"=>'required',
             "customer"=>'required',
             "totalprice"=>'required'
               ]);
@@ -55,8 +55,8 @@ class BookingController extends Controller
         $booking->seatno=request('seatno');
         $booking->date=request('date');
         $booking->status=request('status');
-        $booking->route_id=request('route');
-        // $booking->route_id=request('endroute');
+        $booking->route_id=request('startroute');
+        $booking->route_id=request('endroute');
         $booking->customer_id=request('customer');
         $booking->totalprice=request('totalprice');
 
@@ -109,8 +109,8 @@ class BookingController extends Controller
             "seatno"=>'required',
             "date"=>'required',
             "status"=>'required',
-            // "startroute"=>'required',
-            "route"=>'required',
+            "startroute"=>'required',
+            "endroute"=>'required',
             "customer"=>'required',
             "totalprice"=>'required'
               ]);
@@ -118,8 +118,8 @@ class BookingController extends Controller
         $booking->seatno=request('seatno');
         $booking->date=request('date');
         $booking->status=request('status');
-        $booking->route_id=request('route');
-        // $booking->route_id=request('endroute');
+        $booking->route_id=request('startroute');
+        $booking->route_id=request('endroute');
         $booking->customer_id=request('customer');
         $booking->totalprice=request('totalprice');
 

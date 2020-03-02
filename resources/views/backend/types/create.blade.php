@@ -1,37 +1,57 @@
 @extends('backendtemplate')
 @section('content')
-<h2>Types</h2>
+<div class="container-fluid">
+    <h2>Create Types Form</h2>
+
+    <div class="row">
+      <div class="col-md-12">
 
 <form action="{{route('types.store')}}" method="post" enctype="multipart/form-data">
 	
 	@csrf
-	<label for="name">Name</label>
-	<input type="text" name="name"><br>
-	@if ($errors->has('name'))
-	<span class="help-block  text-danger"><strong>{{ $errors->first('name') }}</strong></span>
-	@endif <br>
-	<label for="seat">Seat</label>
-	<input type="number" name="seat"><br>
-	@if ($errors->has('seat'))
-	<span class="help-block  text-danger"><strong>{{ $errors->first('seat') }}</strong></span>
-	@endif <br>
-	<label for="price">Price</label>
-	<input type="number" name="price"><br>
-	@if ($errors->has('price'))
-	<span class="help-block  text-danger"><strong>{{ $errors->first('price') }}</strong></span>
-	@endif <br>
-	<button type="submit">save</button>
+	<div class="form-group row">
+            <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control @error('name') is-invalid @enderror" id="inputTitle" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+              @error('name')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputSeat" class="col-sm-2 col-form-label">Seat</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control @error('seat') is-invalid @enderror" id="inputTitle" name="seat" value="{{ old('seat') }}" required autocomplete="seat" autofocus>
+              @error('seat')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPrice" class="col-sm-2 col-form-label">Price</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control @error('price') is-invalid @enderror" id="inputTitle" name="price" value="{{ old('price') }}" required autocomplete="price" autofocus>
+              @error('price')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+          </div>
+         <div class="form-group">
+            <button type="submit" class="btn btn-primary">Save</button>
+         </div>
+     </div>
+ </div>
+</div>
+
+
+
+	
 </form>
-
-@endsection
-@section('script')
-  <script type="text/javascript" src="{{asset('js/general.js')}}"></script>
-  <script type="text/javascript" src="{{asset('js/interaction.js')}}"></script>
-  <script type="text/javascript" src="{{asset('js/methods.js')}}"></script>
-  <script type="text/javascript" src="{{asset('js/multiple.js')}}"></script>
-  <script type="text/javascript" src="{{asset('jquery.seat-charts.js')}}"></script>
-  <script type="text/javascript" src="{{asset('jquery.seat-charts.css')}}"></script>
-  <script type="text/javascript" src="{{asset('jquery.seat-charts.min.js')}}"></script>
-
 
 @endsection

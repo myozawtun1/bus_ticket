@@ -2,15 +2,20 @@
 @extends('backendtemplate')
 @section('content')
 <div class="container-fluid">
-<h2>Show with your own ui</h2>
+<h2>Show with booking details</h2>
 	
 	<div class="row">
 		<div class="col-md-12">
 			<table>
 				<tbody>
-					<tr><th> Startroute:{{$route->startroute}} </th></tr>
-					<tr><th>Endroute:{{$route->endroute}}</th></tr>
-					<tr><th>Time:{{$route->time}}</th></tr>
+					<tr><th> Seatno:{{$booking->seatno}} </th></tr>
+					<tr><th> Date:{{$booking->date}} </th></tr>
+
+					<!-- <tr><th> Startroute:{{$booking->startroute}} </th></tr> -->
+					<tr><th>Route:{{$booking->route}}</th></tr>
+					<tr><th>Totalprice:{{$booking->totalprice}}</th></tr>
+					<tr><th> Customer:{{$booking->customer->name}} </th></tr>
+
 					
 				</tbody>
 

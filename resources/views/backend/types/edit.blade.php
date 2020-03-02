@@ -1,7 +1,7 @@
 @extends('backendtemplate')
 @section('content')
 <div class="container-fluid">
-	<h2>Types</h2>
+	<h2>Show with Types Form</h2>
 	
 	
 
@@ -11,22 +11,44 @@
 		<form action="{{route('types.update',$type->id)}}" method="post" enctype="multipart/form-data">
 	@csrf
 	@method('PUT') 
-	<label for="name">Name</label>
-	<input type="text" name="name" value="{{$type->name}}"><br>
-	@if ($errors->has('name'))
-	<span class="help-block  text-danger"><strong>{{ $errors->first('name') }}</strong></span>
-	@endif
-	<label for="seat">Seat</label>
-	<input type="number" name="seat" value="{{$type->seat}}"><br>
-	@if ($errors->has('seat'))
-	<span class="help-block  text-danger"><strong>{{ $errors->first('seat') }}</strong></span>
-	@endif
-	<label for="price">Price</label>
-	<input type="number" name="price" value="{{$type->price}}"><br>
-	@if ($errors->has('price'))
-	<span class="help-block  text-danger"><strong>{{ $errors->first('price') }}</strong></span>
-	@endif
-	<button type="submit">update</button>
+	 <div class="form-group row">
+            <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control @error('name') is-invalid @enderror" id="inputTitle" name="name" value="{{ $type->name }}" required autocomplete="name" autofocus>
+              @error('name')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+          </div>
+      <div class="form-group row">
+            <label for="inputSeat" class="col-sm-2 col-form-label">Seat</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control @error('seat') is-invalid @enderror" id="inputTitle" name="seat" value="{{ $type->seat }}" required autocomplete="seat" autofocus>
+              @error('seat')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+          </div>
+       <div class="form-group row">
+            <label for="inputTitle" class="col-sm-2 col-form-label">Price</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control @error('price') is-invalid @enderror" id="inputTitle" name="price" value="{{ $type->price }}" required autocomplete="price" autofocus>
+              @error('price')
+                <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+                </span>
+              @enderror
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Update</button>
+          </div>
+	
 	
 	</form>
 </div>
