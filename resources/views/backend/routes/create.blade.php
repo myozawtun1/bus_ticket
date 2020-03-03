@@ -41,8 +41,8 @@
           </div>
           <br>
     <div class="form-group row">
-              <label for="inputType">Choose Type:</label>
-            <div class="form-group col-md-6">              
+              <label for="inputType" class="col-sm-2 col-form-label">Choose Type:</label>
+            <div class="form-group col-md-10">              
               <select name="type" class="form-control" id="type">
                 <option value="">Choose Type:</option>
                 @foreach($types as $row)

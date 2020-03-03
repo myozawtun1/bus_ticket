@@ -41,8 +41,8 @@
             </div>
           </div>
      <div class="form-group row">
-              <label for="inputStartroute">Choose Startroute:</label>
-            <div class="form-group col-md-6">              
+              <label for="inputStartroute" class="col-sm-2 col-form-label">Choose Startroute:</label>
+            <div class="form-group col-md-10">              
               <select name="startroute" class="form-control" id="startroute">
                 <option value="">Choose Startroute:</option>
                 @foreach($routes as $row)
@@ -52,8 +52,8 @@
             </div>
         </div>
     <div class="form-group row">
-              <label for="inputStartroute">Choose Endroute:</label>
-            <div class="form-group col-md-6">              
+              <label for="inputStartroute" class="col-sm-2 col-form-label">Choose Endroute:</label>
+            <div class="form-group col-md-10">              
               <select name="endroute" class="form-control" id="endroute">
                 <option value="endroute">Choose Endroute:</option>
                 @foreach($routes as $row)
@@ -75,8 +75,8 @@
           </div>
 	
 	 <div class="form-group row">
-              <label for="inputCustomer">Choose Customer:</label>
-            <div class="form-group col-md-6">              
+              <label for="inputCustomer" class="col-sm-2 col-form-label">Choose Customer:</label>
+            <div class="form-group col-md-10">              
               <select name="customer" class="form-control" id="customer">
                 <option value="customer">Choose Customer:</option>
                 @foreach($customers as $row)

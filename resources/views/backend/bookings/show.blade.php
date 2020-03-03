@@ -11,8 +11,8 @@
 					<tr><th> Seatno:{{$booking->seatno}} </th></tr>
 					<tr><th> Date:{{$booking->date}} </th></tr>
 
-					<!-- <tr><th> Startroute:{{$booking->startroute}} </th></tr> -->
-					<tr><th>Route:{{$booking->route}}</th></tr>
+					<tr><th> Startroute:{{$booking->route->startroute}} </th></tr>
+					<tr><th>Endroteoute:{{$booking->route->endroute}}</th></tr>
 					<tr><th>Totalprice:{{$booking->totalprice}}</th></tr>
 					<tr><th> Customer:{{$booking->customer->name}} </th></tr>
 

@@ -13,7 +13,7 @@
 		<th>Seatno</th>
 		<th>Date</th>
 		<th>Status</th>
-		<th>endroute</th>
+		<th>Startroute</th>
 		<th>Endroute</th>		
 		<th>Total Price</th>
 		<th>Customer</th>
@@ -44,10 +44,10 @@
 				<i class="fas fa-info"></i>
 				
 				</a>
-				<a href="{{route('bookings.edit',$row->id)}}" class="btn btn-warning">
+				<!-- <a href="{{route('bookings.edit',$row->id)}}" class="btn btn-warning">
 				<i class="fas fa-edit"></i>
 				
-				</a>
+				</a> -->
 				<form method="post" action="{{route('bookings.destroy',$row->id)}}" onsubmit="return confirm('Are you sure?')">
 
 					@csrf
